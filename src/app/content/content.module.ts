@@ -1,5 +1,5 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ContentConfig, ContentConfigToken } from './loader/content-configurator.service';
 import { ContentConfigurator } from './loader/content-configurator.service';
 import { ContentLoader, DefaultLoader } from './loader/content-loader.service';

@@ -1,6 +1,6 @@
-import { Injectable, Inject, Optional, Type } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { zip, tap, map, catchError } from 'rxjs/operators';
+import { zip, tap, catchError } from 'rxjs/operators';
 import { Observable, of, forkJoin } from 'rxjs';
 import { ContentConfigurator } from './content-configurator.service';
 
