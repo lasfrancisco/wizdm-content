@@ -1,0 +1,86 @@
+<ng-container *wmContent="let data select 'navigator'; let lang = language">
+
+  <mat-toolbar color="primary" fxFlex="0 0 auto" fxLayout="row" fxLayoutAlign="space-between center">
+
+    <div fxLayout="row" fxLayoutAlign="start center">
+
+      <a mat-icon-button (click)="snav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </a>
+
+      <span>{{ language(lang, data.languages || []) }}</span>
+
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="end center">
+
+      <a mat-button *ngFor="let item of data.menuItems || []" routerLinkActive="link-active" [routerLink]="item.link">
+        {{ item.label }}
+      </a>
+
+    </div>
+
+  </mat-toolbar>
+
+  <mat-divider></mat-divider>
+
+  <mat-progress-bar fxFlex="0 0 auto" color="accent" mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+
+  <mat-sidenav-container fxFlex="1 1 auto" fxLayout="column">
+
+    <mat-sidenav mode="over" #snav>
+
+      <mat-nav-list fxLayout="column" fxLayoutAlign="center center">
+         <a mat-button *ngFor="let item of data.menuItems || []" routerLinkActive="link-active" [routerLink]="item.link">
+          {{ item.label }}
+        </a>
+      </mat-nav-list>
+    
+    </mat-sidenav>  
+      
+    <mat-sidenav-content fxFlex="1 1 auto" fxLayout="column">
+      
+      <div fxFlex="1 1 auto">
+        <router-outlet></router-outlet>
+      </div>
+      
+      <mat-divider></mat-divider>
+
+      <footer fxFlex="0 0 auto"  fxLayout="column" fxLayoutAlign="start center">
+
+        <section fxLayout="column" fxLayoutGap="16px">
+
+          <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="24px">
+
+            <a mat-mini-fab color="primary" [href]="item.link" *ngFor="let item of data.socials">
+              <mat-icon>{{ item.icon }}</mat-icon>
+            </a>
+          </div>
+
+          <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="center center">
+
+            <a mat-button [routerLink]="item.link" *ngFor="let item of data.links">{{ item.label }}</a>
+            
+          </div>
+
+          <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="16px">
+
+            <a *ngFor="let item of data.languages" [routerLink]="languageLink(item.value)" [hreflang]="item.value" [attr.disabled]="item.value === lang" class="mat-small">{{ item.label }}</a>
+            
+          </div>
+
+        </section>
+
+        <section fxLayout="row" contrast>
+
+          <span class="mat-small">{{ data.copyright || "wizdm ©2019" }}</span>
+        
+        </section>
+      
+      </footer>
+    
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+
+</ng-container>

@@ -1,0 +1,17 @@
+<ng-container *wmContent="let content select 'about'">
+
+  <p> Test: {{ content.lang }}</p>
+
+  <h1>{{ content.title || 'About' }}</h1>
+
+  <p>{{ content.description || 'Contact us' }}</p>
+
+  <section *ngFor="let section of content.sections || []">
+
+    <h2>{{ section.title }}</h2>
+
+    <p>{{ section.description }}</p>
+
+  </section>
+ 
+</ng-container>

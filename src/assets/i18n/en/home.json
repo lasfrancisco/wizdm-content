@@ -1,0 +1,54 @@
+{
+  "top": { 
+    "title": "Get your app done right",
+    "description": "Wizdm provides all the key features of a modern single page application ready to use, so, for you to focus on launching your idea the quickest!", 
+    "disclaimer": "Join us and become part of the revolution of wizdm",
+    "illustration": "assets/img/blue-buddha.svg",
+    "callToAction": {
+      "label": "Get started",
+      "link": "apply" 
+    }
+  },
+  "features": [
+    { 
+      "icon": "mobile_friendly",
+      "title": "Responsive navigation",
+      "description": "Navigation smoothly adapts to the device the application renders to."
+    },
+    { 
+      "icon": "all_inbox",
+      "title": "Modular design",
+      "description": "Desiged with full modularity to enable collaboration while minimizing the final bundle size and loading time."
+    },
+    { 
+      "icon": "code",
+      "title": "UI elements",
+      "description": "Rich collections of advanced UI elements ready to use for you to avoid re-inventing the wheel."
+    },
+    { 
+      "icon": "insert_emoticons",
+      "title": "Icon sets",
+      "description": "Both Material icons font and FontAwesome icon set are natively supported to enrich you user interface."
+    },
+    { 
+      "icon": "translate",
+      "title": "Internationalization",
+      "description": "Thanks to a flexible content manager at its core, wizdm handles as many lanuages as you need at once."
+    },
+    { 
+      "icon": "account_box",
+      "title": "Account management",
+      "description": "User authetication, email verification and recovery, rich user profile data and account cancelletion."
+    },
+    { 
+      "icon": "sync",
+      "title": "Data synchronization",
+      "description": "Real-time online and offline data sync based on severless NoSQL database ready for global level scale."
+    },
+    { 
+      "icon": "cloud_upload",
+      "title": "File storage",
+      "description": "File uploading capabilities for user profile image and more."
+    }
+  ]
+}

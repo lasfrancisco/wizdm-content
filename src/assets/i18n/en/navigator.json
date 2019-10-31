@@ -1,0 +1,28 @@
+{
+  "menuItems": [ 
+    { "label": "Home", "link": "home" },
+    { "label": "About", "link": "about" }
+  ],
+
+  "socials": [ 
+    { "icon": "text_rotation_angleup", "link": "https://angular.io" },
+    { "icon": "done", "link": "https://github.com" },
+    { "icon": "clear_all", "link": "https://stackoverflow.com/" },
+    { "icon": "import_contacts", "link": "https://medium.com" }
+  ],
+
+  "links": [
+    { "label": "About", "link": "about" },
+    { "label": "Projects", "link": "explore" },
+    { "label": "Contact us", "link": "contactUs" },
+    { "label": "Terms and privacy", "link": "terms" }
+  ],
+
+  "languages": [
+    { "label": "English", "value": "en" },
+    { "label": "Italiano", "value": "it" },
+    { "label": "Русский", "value": "ru" }
+  ],
+
+  "copyright": "wizdm ©2019"
+}

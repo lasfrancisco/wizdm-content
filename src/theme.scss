@@ -1,0 +1,36 @@
+
+
+@mixin init-application-theme($theme) {
+
+  // Include all the material theme styles
+  @include angular-material-theme($theme);
+
+  $primary: map-get($theme, primary);
+
+  // Defines an additional mat-link class to decorate links diviating
+  // from the strict rules of material design for the sake of clarity
+  .mat-link {
+    cursor: pointer;
+    color: mat-color($accent);
+    text-decoration: underline;
+    //&:hover { text-decoration: underline; }
+  }
+
+  .primary { color: mat-color($primary); }
+ 
+  // Adds custom application specific style extensions
+  a { @extend .mat-link; }
+
+  *[contrast] {
+    background-color: mat-color($primary, 'darker');
+    color: mat-color($primary, 100);
+  }
+
+  // Applies material typography rules globally
+  body {
+    @extend .mat-typography;
+
+    // Removes the margin
+    margin: 0;
+  }
+}

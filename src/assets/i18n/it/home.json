@@ -1,0 +1,42 @@
+{
+  "top": { 
+    "title": "La tua app pronta subito",
+    "description": "Wizdm fornisce tutte le funzionalità importanti di una applicazione su singola pagina moderna pronte all'uso così che tu possa concentrarti sul lancio della tua idea!", 
+    "disclaimer": "Unisciti a noi e partecipa alla rivoluzione di Wizdm",
+    "callToAction": { "label": "Inizia subito" }
+  },
+  "features": [
+    { 
+      "title": "Design responsivo",
+      "description": "La navigazione si adegua elegantemente al dispositivo utilizzato."
+    },
+    { 
+      "title": "Architettura modulare",
+      "description": "Realizzato con la massima modularità così da agevolare la collaborazione, ridurre le dimensioni ed accorciare il tempo di caricamento."
+    },
+    { 
+      "title": "Interfaccia utente",
+      "description": "Ricca collezione di componenti pronti all'uso per evitarti di dover reinventare la ruota."
+    },
+    { 
+      "title": "Icone",
+      "description": "Sia il font di Material che il set d'icone di FontAwesome sono disponibili nativamente per arricchire la tua interfaccia utente."
+    },
+    { 
+      "title": "Internazionalizzazione",
+      "description": "Grazie al flessibile gestore dei contenuti alla propria base, wizdm gestisce contemporaneamente tante lingue quante te ne servono."
+    },
+    { 
+      "title": "Gestione utentit",
+      "description": "Autenticazione degli utenti, verifica e recupero dell'email, profilo utente e cancellazione dell'account."
+    },
+    { 
+      "title": "Sincronizzazione dati",
+      "description": "Sincronizzazione in tempo reali dei dati online e offline basata su potenti database NoSQL pronti a garantire copertura globale."
+    },
+    { 
+      "title": "Memorizzazione file",
+      "description": "Caricamento dei file nel cloud per l'immagine del profile utente e molto altro."
+    }
+  ]
+}

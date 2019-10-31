@@ -1,0 +1,44 @@
+
+<div class="background primary"></div>
+
+<section fxLayout="row" fxLayoutAlign="center center" class="banner" *wmContent="let header select 'home.top'">
+
+  <div fxFlex.gt-sm="50%" fxLayout="column" fxLayoutAlign="center center" class="textbox">  
+  
+    <h1 class="mat-display-1"><b>{{ header.title || 'Get Your App Done Right' }}</b></h1> 
+     
+    <p>{{ header.description || 'Wizdm helps you to do so.' }}</p>
+ 
+    <button mat-raised-button color="accent" [routerLink]="header.callToAction.link">{{ header.callToAction.label || 'Get Started' }}</button>
+
+    <p class="mat-small">{{ header.disclaimer }}</p>
+
+  </div> 
+
+  <img fxHide.lt-sm fxFlex="40" [src]="header.illustration" />
+
+</section>
+
+<section class="features" fxLayout="column" fxLayoutAlign="center center" fxFill *wmContent="let features select 'home.features'">
+
+  <div class="row" fxLayout="row wrap" fxLayout.lt-sm="column">
+
+    <ng-container *ngFor="let feat of features || []">
+  
+      <div class="cell" fxFlex="33.3%" fxFlex.lt-md="50%" fxFlex.lt-sm="100%">
+
+        <div class="content">
+
+          <mat-icon class="icon">{{ feat.icon }}</mat-icon>
+          <h2><b>{{ feat.title }}</b></h2>
+          <p> {{ feat.description }}</p>
+
+        </div>
+
+      </div>
+
+    </ng-container>
+    
+  </div>
+
+</section>

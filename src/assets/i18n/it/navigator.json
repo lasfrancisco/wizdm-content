@@ -1,0 +1,13 @@
+{
+  "menuItems": [ 
+    { "label": "Home" },
+    { "label": "Chi siamo" }
+  ],
+
+  "links": [
+    { "label": "Chi siamo" },
+    { "label": "Il Progetto" },
+    { "label": "Contattaci" },
+    { "label": "Termini e Privacy" }
+  ]
+}

@@ -1,0 +1,97 @@
+
+@import '~@angular/material/theming';
+
+:host {
+  position: relative;
+  display: block;
+  
+  .background {
+    display: flex;
+    position: absolute;
+    min-height: 480px;
+    height: 80vh;
+    max-height: 560px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    transform: skewY(-10deg);
+    transform-origin: 0 100%;
+    background-color: currentColor;
+    background: linear-gradient(145deg, currentColor, transparent);
+    opacity: 0.3;
+  }
+
+  .banner {
+    position: relative;
+    //min-height: 350px;
+
+    width: 100%;
+    height: 80vh;
+    min-height: 480px;
+    max-height: 560px;
+
+    //@include wm-padding-top();
+
+    .textbox { 
+      
+      box-sizing: border-box;
+      padding: 25px; 
+
+       h1 {
+        //@include mat-typography-level-to-styles($wm-typography, display-1);
+        //font-family: mat-font-family($wm-typography, display-1);
+        //font-size  : mat-font-size($wm-typography, display-1);
+        //font-weight: 800;
+        text-align: center;
+      }
+
+      p { text-align: justify; }
+
+      button { margin: 16px 0; }
+      
+    }    
+  }
+
+  .features {
+
+    padding: 32px;
+
+    .row {
+
+      .cell {
+
+        padding: 8px;
+
+        .content {
+
+          width: 100%;
+          height: 100%;
+          padding: 16px;
+          text-align: center;
+          box-sizing: border-box;
+          border-radius: 5px;
+
+          @include mat-elevation-transition;
+          @include mat-elevation(2);
+          &:hover { @include mat-elevation(8);}
+
+          .icon {
+            $size: 32px;
+            font-size: $size;
+            width: $size * 1.5;// Makes sure having room to center larger icons
+            height: $size;
+            line-height: $size;
+            //border-radius: 50%;
+            //border: 1px solid currentColor;
+            //box-sizing: border-box;
+            //text-align: center;
+            //vertical-align: middle;
+
+            //text-shadow: 5px 5px 1px gray;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import '~@angular/material/theming';
+@import './theme';
+
+// Uncomment this option to load material icons from the web
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+// Uncomment this option to load fontawsome icons from the web
+@import url('https://use.fontawesome.com/releases/v5.9.0/css/all.css');
+
+// Load the main Ubuntu google font from the web
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$primary: mat-palette($mat-blue);
+$accent:  mat-palette($mat-amber, 700);
+$warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$app-theme: mat-light-theme($primary, $accent, $warn);
+
+// Includes the core theme indepeneted material style
+@include mat-core();
+
+// Initialize the global application theme
+@include init-application-theme($app-theme);

@@ -1,0 +1,30 @@
+
+:host {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  .flag { width: 16px; }
+
+  .link-active { text-decoration: underline; }
+
+  footer {
+
+    section { 
+      padding: 32px;
+      width: 100%; 
+    }
+
+    a[disabled=true] {
+      text-decoration: dotted underline;
+      pointer-events: none;
+      color: grey;
+    }
+  }
+}
