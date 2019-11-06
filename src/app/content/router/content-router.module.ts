@@ -1,5 +1,5 @@
 import { NgModule, Inject } from '@angular/core';
-import { RouterModule, , Route, Routes, ROUTES, provideRoutes } from '@angular/router';
+import { RouterModule, Route, Routes, ROUTES, provideRoutes } from '@angular/router';
 import { ContentConfigurator } from '../loader/content-configurator.service';
 import { SelectorResolver } from './selector-resolver.service';
 import { contentResolver } from './content-resolver';
