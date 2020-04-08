@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ContentConfigurator } from '../loader/content-configurator.service';
 import { ContentStreamer } from './content-streamer.service';
 import { Subscription } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Directive({
   selector: '[wmContent]'
@@ -39,7 +40,8 @@ export class ContentDirective extends ContentStreamer implements OnInit, OnDestr
     // Skips on null selectors
     if(!selector) { return; }
     // Binds the data stream observable 
-    this.$implicit = this.stream(selector);
+    this.$implicit = this.stream(selector)
+      .pipe( map( value => value || this.wmContentOr ));
   }
 
   /** Binds the requested content as an object directly:
@@ -56,6 +58,9 @@ export class ContentDirective extends ContentStreamer implements OnInit, OnDestr
     // Subscribes to the data stream
     this.sub = this.stream(selector)
       // Binds the data content
-      .subscribe( data => this.$implicit = data );
+      .subscribe( data => this.$implicit = data || this.wmContentOr);
   }
+
+  /** Defines teh default value to use whenever the requested content were missing */
+  @Input() wmContentOr: any = {};
 }
