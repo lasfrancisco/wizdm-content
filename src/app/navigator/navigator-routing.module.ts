@@ -4,11 +4,20 @@ import { ContentSelector, ContentConfigurator, ContentRouterModule, RoutesWithCo
 import { NavigatorComponent } from './navigator.component';
 
 @Injectable({ providedIn: 'root' })
-class test implements CanActivate {
+class WelcomeNewComers implements CanActivate {
+
+  private newComer: boolean = true;
+
+  constructor(private router: Router) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
 
-    console.log(route, state);
+    if(this.newComer && state.url.split('/')[1] === 'auto') { 
+
+      this.newComer = false;
+
+      return this.router.createUrlTree([ 'auto', 'about' ]);
+    }  
     
     return true;
   }
@@ -18,7 +27,7 @@ const routes: RoutesWithContent = [
   { path: '', redirectTo: 'auto', pathMatch: 'full' },
   { 
     path: ':lang', component: NavigatorComponent, 
-    canActivate: [ test, ContentSelector ],
+    canActivate: [ WelcomeNewComers, ContentSelector ],
     content: 'navigator',
     
     children: [
